@@ -12,13 +12,14 @@ import {Outlet} from '../outlet.model';
 export class OutletVolComponent implements OnInit {
 
   constructor(private myservice: OutletlistService) { }
-  private Outlets: Outlet[];
+  outlets: Outlet[] = [];
 
   ngOnInit(): void {
      this.myservice.getOutlets().subscribe((data) => {
-          this.Outlets = Array.from(Object.keys(data), k => data[k]);
-          console.log(this.Outlets);
+          this.outlets = Array.from(Object.keys(data), k => data[k]);
+          console.log(this.outlets);
         });
   }
+
 
 }
