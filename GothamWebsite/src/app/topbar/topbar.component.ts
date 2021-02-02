@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
 
+  name  = 'Muhsina Binth Abdulla';
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onKeyup(newname: string): void {
+      this.name = newname;
+  }
 }
