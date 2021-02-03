@@ -18,8 +18,8 @@ import { AddOutletWindowComponent } from './add-outlet-window/add-outlet-window.
 import { EditDeleteOutletComponent } from './edit-delete-outlet/edit-delete-outlet.component';
 import { EditformComponent } from './editform/editform.component';
 import { DeleteWindowComponent } from './delete-window/delete-window.component';
-import { SighInComponent } from './sigh-in/sigh-in.component';
 import { AdminComponent } from './admin/admin.component';
+import { SighnInComponent } from './sighn-in/sighn-in.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +37,8 @@ import { AdminComponent } from './admin/admin.component';
     EditDeleteOutletComponent,
     EditformComponent,
     DeleteWindowComponent,
-    SighInComponent,
-    AdminComponent
+    AdminComponent,
+    SighnInComponent
   ],
   imports: [
     BrowserModule,

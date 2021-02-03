@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SighInComponent } from './sigh-in.component';
+import { SighnInComponent } from './sighn-in.component';
 
-describe('SighInComponent', () => {
-  let component: SighInComponent;
-  let fixture: ComponentFixture<SighInComponent>;
+describe('SighnInComponent', () => {
+  let component: SighnInComponent;
+  let fixture: ComponentFixture<SighnInComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SighInComponent ]
+      declarations: [ SighnInComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SighInComponent);
+    fixture = TestBed.createComponent(SighnInComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

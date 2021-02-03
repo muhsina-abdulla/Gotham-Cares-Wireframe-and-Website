@@ -1,2 +1,12 @@
 <p>outlet-vol works!</p>
+<div class="outlist" *ngFor= "let outlet of outlets">
+    <h3>{{ outlet.name}}</h3>
+    <p>Street : {{outlet.street}}</p>
+    <p>Landmark : {{outlet.landmark}}</p>
+    <p>Available Food Packets : {{outlet.availableFoodPackets}}</p>
+    <p>Type of Food : {{outlet.FoodType}}</p>
+    <p>Required Volunteers : {{outlet.RequiredVolunteers}}</p>
+    <p>Date : {{outlet.Date}}</p>
+    <hr>
+</div>
 
