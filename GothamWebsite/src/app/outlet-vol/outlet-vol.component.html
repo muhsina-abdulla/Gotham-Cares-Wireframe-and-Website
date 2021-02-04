@@ -1,5 +1,5 @@
-<div *ngIf="checktype(); then thenBlock else elseBlock"></div>
-<div #thenBlock class="outlist" *ngFor= "let outlet of outlets">
+
+<div class="outlist" *ngFor= "let outlet of outlets | async">
     <h3>{{ outlets$.name}}</h3>
     <p>Street : {{outlets$.street}}</p>
     <p>Landmark : {{outlets$.landmark}}</p>
@@ -10,7 +10,5 @@
     <button class ="btn btn-Outline-primary">Volunteer</button>
     <hr>
 </div>
-<div #elseBlock>
-    <p>{{outlets$}}</p>
-</div>
+
 

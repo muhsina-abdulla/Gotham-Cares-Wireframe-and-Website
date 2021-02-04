@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OutletlistService } from '../outletlist.service';
 import {Outlet} from '../outlet.model';
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs";
+
 
 
 @Component({
@@ -11,27 +12,15 @@ import {Observable} from "rxjs/Observable";
   providers: [OutletlistService],
 })
 export class OutletVolComponent implements OnInit {
-
-
-  outlets$: Observable<Outlet[]>;
-  constructor(private myservice: OutletlistService) { }
+  outlets: Observable<Outlet[]> | undefined;
+  constructor(private outletlistService: OutletlistService) { }
 
   ngOnInit(): void {
-     this.myservice.getOutlets().subscribe((data) => {
-          this.outlets$ = Array.from(Object.keys(data), k => data[k]);
-          console.log(this.outlets$);
-        });
-  }
-
-  checktype(): boolean {
-    let n = typeof this.outlets$;
-    if (n === 'object'){
-      return true;
-    }
-    else{
-      return false;
-    }
+             this.outlets = this.outletlistService.getOutlets();
+        }
   }
 
 
-}
+
+
+
