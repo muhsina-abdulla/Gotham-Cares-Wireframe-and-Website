@@ -1,12 +1,16 @@
-<p>outlet-vol works!</p>
-<div class="outlist" *ngFor= "let outlet of outlets">
-    <h3>{{ outlet.name}}</h3>
-    <p>Street : {{outlet.street}}</p>
-    <p>Landmark : {{outlet.landmark}}</p>
-    <p>Available Food Packets : {{outlet.availableFoodPackets}}</p>
-    <p>Type of Food : {{outlet.FoodType}}</p>
-    <p>Required Volunteers : {{outlet.RequiredVolunteers}}</p>
-    <p>Date : {{outlet.Date}}</p>
+<div *ngIf="checktype(); then thenBlock else elseBlock"></div>
+<div #thenBlock class="outlist" *ngFor= "let outlet of outlets">
+    <h3>{{ outlets$.name}}</h3>
+    <p>Street : {{outlets$.street}}</p>
+    <p>Landmark : {{outlets$.landmark}}</p>
+    <p>Available Food Packets : {{outlets$.availableFoodPackets}}</p>
+    <p>Type of Food : {{outlets$.FoodType}}</p>
+    <p>Required Volunteers : {{outlets$.RequiredVolunteers}}</p>
+    <p>Date : {{outlets$.Date}}</p>
+    <button class ="btn btn-Outline-primary">Volunteer</button>
     <hr>
+</div>
+<div #elseBlock>
+    <p>{{outlets$}}</p>
 </div>
 
