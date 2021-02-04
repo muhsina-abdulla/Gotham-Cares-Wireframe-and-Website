@@ -17,7 +17,7 @@ import { VolRegisterComponent } from './vol-register/vol-register.component';
 import { AddOutletWindowComponent } from './add-outlet-window/add-outlet-window.component';
 import { EditDeleteOutletComponent } from './edit-delete-outlet/edit-delete-outlet.component';
 import { EditformComponent } from './editform/editform.component';
-import { DeleteWindowComponent } from './delete-window/delete-window.component';
+
 import { AdminComponent } from './admin/admin.component';
 import { SighnInComponent } from './sighn-in/sighn-in.component';
 
@@ -36,7 +36,6 @@ import { SighnInComponent } from './sighn-in/sighn-in.component';
     AddOutletWindowComponent,
     EditDeleteOutletComponent,
     EditformComponent,
-    DeleteWindowComponent,
     AdminComponent,
     SighnInComponent
   ],
