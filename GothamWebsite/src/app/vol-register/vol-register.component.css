@@ -1,0 +1,12 @@
+.lab {
+  color: #0e0c0c;
+  font-weight: bold;
+  display: block;
+  width: 150px;
+}
+label:after {
+  content: ": ";
+}
+button {
+  margin-top: 15px;
+}

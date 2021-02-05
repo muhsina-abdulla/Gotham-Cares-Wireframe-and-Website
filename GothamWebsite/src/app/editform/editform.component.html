@@ -1,1 +1,32 @@
-<p>editform works!</p>
+<div class="win">
+    <form>
+        <div class="field-dark">
+            <label>Outlet Id</label>
+            <input name="OutletId" id="OutletId" [value]="service.formdata.id" readonly>
+            <br>
+            <label>Street</label>
+            <input name="street" id="street" [value]="service.formdata.street">
+            <br>
+            <label>Landmark</label>
+            <input name="landmark" id="landmark" [value]="service.formdata.landmark">
+            <br>
+            <label>Available Food Packets</label>
+            <input name="foodpackets" id="foodpackets" [value]="service.formdata.availableFoodPackets">
+            <br>
+            <label>Type of Food</label>
+            <input name="ftype" id="ftype" [value]="service.formdata.foodType">
+            <br>
+            <label>Required Volunteers</label>
+            <input name="vols" id="vols" [value]="service.formdata.requiredVolunteers">
+            <br>
+            <span>
+                <label>Date</label>
+                <input type="text" placeholder="yyyy-mm-dd" name="date" id="date" [value]="service.formdata.date">
+            </span>
+            
+            <br>
+            <button type="submit" class="btn btn-lg btn-dark" (click)="Edit()">Edit</button>
+        </div>
+    </form>
+</div>
+

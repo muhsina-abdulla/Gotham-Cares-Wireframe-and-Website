@@ -12,4 +12,8 @@ export class AddOutletWindowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addOutlet(){
+    return true;
+  }
+
 }

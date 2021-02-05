@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OutletlistService } from '../outletlist.service';
 import {Outlet} from '../outlet.model';
-import {Observable} from "rxjs";
 
 
 
@@ -9,16 +8,23 @@ import {Observable} from "rxjs";
   selector: 'app-outlet-vol',
   templateUrl: './outlet-vol.component.html',
   styleUrls: ['./outlet-vol.component.css'],
-  providers: [OutletlistService],
+  providers: [OutletlistService]
 })
 export class OutletVolComponent implements OnInit {
-  outlets: Observable<Outlet[]> | undefined;
-  constructor(private outletlistService: OutletlistService) { }
-
+  public outlets: Outlet[] = [];
+  constructor(private service: OutletlistService) { }
   ngOnInit(): void {
-             this.outlets = this.outletlistService.getOutlets();
+             this.service.getOutlets().subscribe((data) => {
+               this.outlets = Array.from(Object.keys(data), k => data[k]);
+               console.log(this.outlets);
+             });
         }
+  fillform(outlet: Outlet): void{
+    this.service.formdata = outlet;
+    console.log(this.service.formdata);
   }
+
+}
 
 
 

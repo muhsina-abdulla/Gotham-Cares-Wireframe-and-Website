@@ -1,14 +1,17 @@
-
-<div class="outlist" *ngFor= "let outlet of outlets | async">
-    <h3>{{ outlets$.name}}</h3>
-    <p>Street : {{outlets$.street}}</p>
-    <p>Landmark : {{outlets$.landmark}}</p>
-    <p>Available Food Packets : {{outlets$.availableFoodPackets}}</p>
-    <p>Type of Food : {{outlets$.FoodType}}</p>
-    <p>Required Volunteers : {{outlets$.RequiredVolunteers}}</p>
-    <p>Date : {{outlets$.Date}}</p>
-    <button class ="btn btn-Outline-primary">Volunteer</button>
+<app-secondnav></app-secondnav>
+<div class="title"><h3>Distribution Outlets</h3></div>
+<hr>
+<div class="container-sm" *ngFor= "let outlet of outlets">
+    <h4>{{ outlet.name}}</h4>
+    <p>Street : {{outlet.street}}</p>
+    <p>Landmark : {{outlet.landmark}}</p>
+    <p>Available Food Packets : {{outlet.availableFoodPackets}}</p>
+    <p>Type of Food : {{outlet.foodType}}</p>
+    <p>Required Volunteers : {{outlet.requiredVolunteers}}</p>
+    <p>Date : {{outlet.date}}</p>
+    <button class ="btn btn-dark" (click)="fillform(outlet)">Volunteer</button>
     <hr>
 </div>
+
 
 

@@ -4,7 +4,7 @@ export interface Outlet {
     street: string;
     landmark: string;
     availableFoodPackets: number;
-    FoodType: string;
-    RequiredVolunteers: number;
-    Date: string;
+    foodType: string;
+    requiredVolunteers: number;
+    date: string;
 }

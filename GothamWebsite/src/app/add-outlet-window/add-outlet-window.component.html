@@ -1,1 +1,32 @@
-<p>add-outlet-window works!</p>
+<div class="win">
+    <form>
+        <div class="field-dark">
+            <label>Outlet Name</label>
+            <input name="name" id="name">
+            <br>
+            <label>Street</label>
+            <input name="street" id="street">
+            <br>
+            <label>Landmark</label>
+            <input name="landmark" id="landmark">
+            <br>
+            <label>Available Food Packets</label>
+            <input name="foodpackets" id="foodpackets">
+            <br>
+            <label>Type of Food</label>
+            <input name="ftype" id="ftype">
+            <br>
+            <label>Required Volunteers</label>
+            <input name="vols" id="vols">
+            <br>
+            <span>
+                <label>Date</label>
+                <input type="text" placeholder="yyyy-mm-dd" name="date" id="date">
+            </span>
+
+            <br>
+            <button type="submit" class="btn btn-lg btn-secondary" (click)="addOutlet()">ADD</button>
+        </div>
+    </form>
+</div>
+

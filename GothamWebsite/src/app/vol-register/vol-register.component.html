@@ -1,1 +1,15 @@
-<p>vol-register works!</p>
+<div class="container-sm">
+    <form>
+        <div class="field-dark">
+            <label class="lab">Name</label>
+            <input name="name" id="name"><br>
+            <label class="lab">Phone Number</label>
+            <input name="phone" id="phone"><br>
+            <label class="lab">Email</label>
+            <input name="email" id="email"><br>
+            <label class="lab">Outlet Id</label>
+            <input name="OutletId" id="OutletId" [value]="service.formdata.id" readonly><br>
+            <button type="submit" class="btn btn-dark" (click)="Register()">Register</button>
+        </div>
+    </form>
+</div>
