@@ -1,5 +1,5 @@
 export interface Outlet {
-    id: number;
+    outletId: number;
     name: string;
     street: string;
     landmark: string;

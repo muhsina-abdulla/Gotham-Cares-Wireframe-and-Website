@@ -1,14 +1,21 @@
-<div>
-    <div>
-        <h2>Log in</h2>
+<div class="win">
+<form #signin (submit)="login()" autocomplete="off">
+    <div class="field-dark" [formGroup]="loginForm">
+        <label>Email</label>
+        <input type="email" name="email" formControlName="email"  id="email" required>
+        <br>
+        <label>Password</label>
+        <input type="password" name="street" formControlName="password" id="password" required>
+        <br>
+        <button class="btn btn-outline-primary">Sign In</button>
     </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="abc@domain.com">
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password">
-    </div>
-    <button class="btn btn-outline-primary">Sign in</button>
+</form>
 </div>
+<div>
+    <h5>{{response.message}}</h5>
+</div>
+<div *ngIf="this.signedIn">
+    <a routerLink="adminpage">Go to Admin Page</a>
+</div>
+
+

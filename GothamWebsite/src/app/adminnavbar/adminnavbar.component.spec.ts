@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainImageComponent } from './main-image.component';
+import { AdminnavbarComponent } from './adminnavbar.component';
 
-describe('MainImageComponent', () => {
-  let component: MainImageComponent;
-  let fixture: ComponentFixture<MainImageComponent>;
+describe('AdminnavbarComponent', () => {
+  let component: AdminnavbarComponent;
+  let fixture: ComponentFixture<AdminnavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainImageComponent ]
+      declarations: [ AdminnavbarComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainImageComponent);
+    fixture = TestBed.createComponent(AdminnavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

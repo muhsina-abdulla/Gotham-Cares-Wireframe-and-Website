@@ -1,0 +1,13 @@
+<h4>{{ outlet.name}}</h4>
+    <p>Street : {{outlet.street}}</p>
+    <p>Landmark : {{outlet.landmark}}</p>
+    <p>Available Food Packets : {{outlet.availableFoodPackets}}</p>
+    <p>Type of Food : {{outlet.foodType}}</p>
+    <p>Required Volunteers : {{outlet.requiredVolunteers}}</p>
+    <p>Date : {{outlet.date}}</p>
+    <div class="container">
+       <span><button class="btn btn-secondary" (click)="onEdit()">Edit</button></span> 
+        <span><button class="btn btn-danger" (click)="delete(outlet)" routerLink="admin">Delete</button></span>     
+    </div>
+    <app-editform *ngIf="this.edit" [outlet]="outlet"></app-editform>
+    <hr>

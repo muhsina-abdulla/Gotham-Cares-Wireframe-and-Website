@@ -1,31 +1,31 @@
 <div class="win">
-    <form>
-        <div class="field-dark">
+    <form #newOutlet (submit)="addOutlet()" autocomplete="off" >
+        <div class="field-dark" [formGroup]="outletForm">
             <label>Outlet Name</label>
-            <input name="name" id="name">
+            <input name="name" formControlName="name" id="name" required>
             <br>
             <label>Street</label>
-            <input name="street" id="street">
+            <input name="street" formControlName="street"  id="street" required>
             <br>
             <label>Landmark</label>
-            <input name="landmark" id="landmark">
+            <input name="landmark" formControlName="landmark" id="landmark" required>
             <br>
             <label>Available Food Packets</label>
-            <input name="foodpackets" id="foodpackets">
+            <input type="number" name="availableFoodPackets" formControlName="availableFoodPackets" id="availableFoodPackets" required>
             <br>
             <label>Type of Food</label>
-            <input name="ftype" id="ftype">
+            <input name="foodType" formControlName="foodType"id="landmark" id="foodType" required>
             <br>
             <label>Required Volunteers</label>
-            <input name="vols" id="vols">
+            <input type="number" name="requiredVolunteers" formControlName="requiredVolunteers"id="landmark"id="vols" required>
             <br>
             <span>
                 <label>Date</label>
-                <input type="text" placeholder="yyyy-mm-dd" name="date" id="date">
+                <input type="text" placeholder="yyyy-mm-dd" name="date" formControlName="date" id="date">
             </span>
 
             <br>
-            <button type="submit" class="btn btn-lg btn-secondary" (click)="addOutlet()">ADD</button>
+            <button type="submit" class="btn btn-lg btn-secondary">ADD</button>
         </div>
     </form>
 </div>

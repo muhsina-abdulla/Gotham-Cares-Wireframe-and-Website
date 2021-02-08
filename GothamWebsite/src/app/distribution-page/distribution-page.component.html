@@ -1,0 +1,6 @@
+<app-secondnav></app-secondnav>
+<h3>Distribution Outlets</h3>
+
+<div class="container-sm" *ngFor="let outlet of outlets">
+    <app-outlet-vol [outlet]="outlet"></app-outlet-vol>
+</div>

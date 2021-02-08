@@ -1,31 +1,36 @@
 <div class="win">
-    <form>
-        <div class="field-dark">
+    <form #editOutlet (submit)="edit()">
+        <div class="field-dark" [formGroup]="outletForm">
             <label>Outlet Id</label>
-            <input name="OutletId" id="OutletId" [value]="service.formdata.id" readonly>
+            <input name="outletId" formControlName="outletId" id="outletId" [value]="outlet.outletId" readonly>
+            <br>
+            <label>Outlet Name</label>
+            <input name="name" formControlName="name" id="name" [value]="outlet.name" required>
             <br>
             <label>Street</label>
-            <input name="street" id="street" [value]="service.formdata.street">
+            <input  formControlName="street" id="street" [value]="outlet.street" required>
             <br>
             <label>Landmark</label>
-            <input name="landmark" id="landmark" [value]="service.formdata.landmark">
+            <input  formControlName="landmark" id="landmark" required>
             <br>
             <label>Available Food Packets</label>
-            <input name="foodpackets" id="foodpackets" [value]="service.formdata.availableFoodPackets">
+            <input type="number" formControlName="availableFoodPackets"
+                id="availableFoodPackets" [value]="outlet.availableFoodPackets" required>
             <br>
             <label>Type of Food</label>
-            <input name="ftype" id="ftype" [value]="service.formdata.foodType">
+            <input formControlName="foodType" id="foodType" required>
             <br>
             <label>Required Volunteers</label>
-            <input name="vols" id="vols" [value]="service.formdata.requiredVolunteers">
+            <input type="number" formControlName="requiredVolunteers"  id="requiredVolunteers" [value]="outlet.requiredVolunteers"
+                required>
             <br>
             <span>
                 <label>Date</label>
-                <input type="text" placeholder="yyyy-mm-dd" name="date" id="date" [value]="service.formdata.date">
+                <input type="text" [value]="outlet.date" formControlName="date" id="date">
             </span>
-            
+    
             <br>
-            <button type="submit" class="btn btn-lg btn-dark" (click)="Edit()">Edit</button>
+            <button type="submit" class="btn btn-lg btn-secondary">Edit</button>
         </div>
     </form>
 </div>

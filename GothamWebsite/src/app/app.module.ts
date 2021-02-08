@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { MottoComponent } from './motto/motto.component';
-import { MainImageComponent } from './main-image/main-image.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { SecondnavComponent } from './secondnav/secondnav.component';
@@ -20,6 +19,12 @@ import { EditformComponent } from './editform/editform.component';
 
 import { AdminComponent } from './admin/admin.component';
 import { SighnInComponent } from './sighn-in/sighn-in.component';
+import { OutletComponent } from './outlet/outlet.component';
+import { DistributionPageComponent } from './distribution-page/distribution-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,6 @@ import { SighnInComponent } from './sighn-in/sighn-in.component';
     NavbarComponent,
     TopbarComponent,
     MottoComponent,
-    MainImageComponent,
     WelcomeComponent,
     FooterComponent,
     SecondnavComponent,
@@ -37,7 +41,12 @@ import { SighnInComponent } from './sighn-in/sighn-in.component';
     EditDeleteOutletComponent,
     EditformComponent,
     AdminComponent,
-    SighnInComponent
+    SighnInComponent,
+    OutletComponent,
+    DistributionPageComponent,
+    HomePageComponent,
+    NotFoundComponent,
+    AdminnavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +54,45 @@ import { SighnInComponent } from './sighn-in/sighn-in.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path:'',
+        component: HomePageComponent
+      },
+      {
+        path:'distribution/register',
+        component: VolRegisterComponent
+      },
+      {
+        path:'distribution',
+        component: DistributionPageComponent
+      },
+      {
+        path:'signin/adminpage/newOutlet',
+        component: AddOutletWindowComponent
+      },
+       {
+        path:'signin/adminpage/edit-delete-Outlet/editOutlet',
+        component: EditformComponent
+      },
+      {
+        path:'signin/adminpage/edit-delete-Outlet',
+        component: EditDeleteOutletComponent
+      },
+      {
+        path:'signin/adminpage',
+        component: AdminComponent
+      },
+      {
+        path:'signin',
+        component: SighnInComponent
+      },
+      {
+        path:'**',
+        component: NotFoundComponent
+      },
+     
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,12 @@
-<app-secondnav></app-secondnav>
+ <app-secondnav></app-secondnav>
 <h3>Distribution Outlets</h3>
 
 <div class="container-sm" *ngFor="let outlet of outlets">
-    <h4>{{ outlet.name}}</h4>
-    <p>Street : {{outlet.street}}</p>
-    <p>Landmark : {{outlet.landmark}}</p>
-    <p>Available Food Packets : {{outlet.availableFoodPackets}}</p>
-    <p>Type of Food : {{outlet.foodType}}</p>
-    <p>Required Volunteers : {{outlet.requiredVolunteers}}</p>
-    <p>Date : {{outlet.date}}</p>
-    <div class="container">
-       <span><button class="btn btn-secondary">Edit</button></span> 
-        <span><button class="btn btn-danger">Delete</button></span>
-    </div>
-    <hr>
+    <app-outlet [outlet]="outlet"></app-outlet>
 </div>
+
+
+
     
 
 

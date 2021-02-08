@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Outlet } from '../outlet.model';
 import { OutletlistService } from '../outletlist.service';
 
@@ -8,8 +8,10 @@ import { OutletlistService } from '../outletlist.service';
   styleUrls: ['./edit-delete-outlet.component.css'],
   providers: [OutletlistService]
 })
+
 export class EditDeleteOutletComponent implements OnInit {
   public outlets: Outlet[] = [];
+  
   constructor(private service: OutletlistService) { }
 
   ngOnInit(): void {
@@ -18,5 +20,9 @@ export class EditDeleteOutletComponent implements OnInit {
                console.log(this.outlets);
              });
   }
+ 
+
+  
+  
 
 }

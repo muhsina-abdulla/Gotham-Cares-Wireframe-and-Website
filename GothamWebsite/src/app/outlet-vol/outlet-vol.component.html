@@ -1,7 +1,5 @@
-<app-secondnav></app-secondnav>
-<div class="title"><h3>Distribution Outlets</h3></div>
-<hr>
-<div class="container-sm" *ngFor= "let outlet of outlets">
+
+<div>
     <h4>{{ outlet.name}}</h4>
     <p>Street : {{outlet.street}}</p>
     <p>Landmark : {{outlet.landmark}}</p>
@@ -9,9 +7,11 @@
     <p>Type of Food : {{outlet.foodType}}</p>
     <p>Required Volunteers : {{outlet.requiredVolunteers}}</p>
     <p>Date : {{outlet.date}}</p>
-    <button class ="btn btn-dark" (click)="fillform(outlet)">Volunteer</button>
+    <button class="btn btn-dark" (click)="fillform(outlet)" routerLink="register">Volunteer</button>
     <hr>
+
 </div>
+   
 
 
 
