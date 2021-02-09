@@ -33,7 +33,7 @@ export class VolRegisterComponent implements OnInit {
     }); }
 
   
-  registerVol(){
+  registerVol(){ 
     console.log('inside registerVol');
     this.service.postVolunteer(this.registrationForm.value).subscribe(resp =>{
       this.response = resp;
