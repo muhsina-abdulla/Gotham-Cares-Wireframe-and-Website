@@ -1,14 +1,16 @@
 <div class="container-sm">
-    <form>
-        <div class="field-dark">
+    <form #Register (Submit)="register()" autocomplete="off">
+        <div class="field-dark" [formGroup]="registrationForm">
+            <label class="lab">Outlet Id</label>
+            <input formControlName="outletId" readonly><br>
             <label class="lab">Name</label>
-            <input name="name" id="name"><br>
-            <label class="lab">Phone Number</label>
-            <input name="phone" id="phone"><br>
+            <input formControlName="name" id="name"><br>
+            <label type="number" class="lab">Phone Number</label>
+            <input formControlName="phone" id="phone"><br>
             <label class="lab">Email</label>
-            <input name="email" id="email"><br>
+            <input type="email" formControlName="email" id="email"><br>
             
-            <button type="submit" class="btn btn-dark" (click)="Register()">Register</button>
+            <button type="submit" class="btn btn-dark">Register</button>
         </div>
     </form>
 </div>

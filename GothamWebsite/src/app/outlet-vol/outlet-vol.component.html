@@ -7,10 +7,15 @@
     <p>Type of Food : {{outlet.foodType}}</p>
     <p>Required Volunteers : {{outlet.requiredVolunteers}}</p>
     <p>Date : {{outlet.date}}</p>
-    <button class="btn btn-dark" (click)="fillform(outlet)" routerLink="register">Volunteer</button>
+    <button class="btn btn-dark" (click)="fillform()">Volunteer</button>
     <hr>
 
 </div>
+
+<div *ngIf="this.volunteer">
+    <app-vol-register [outlet]="outlet"></app-vol-register>
+</div>
+<hr>
    
 
 

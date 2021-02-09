@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Outlet } from './outlet.model';
-import { FormGroup, NgForm } from '@angular/forms';
+import { FormGroup} from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class OutletlistService {
       return this.http.get<any>(this.apiurl);
   }
 
-  postOutlet(data: FormGroup): void{
+   postOutlet(data: FormGroup): void{
       console.log(data);
       this.http.post(this.apiurl, data).subscribe(res => {
       console.log(res);

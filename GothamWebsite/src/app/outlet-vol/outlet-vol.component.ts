@@ -12,12 +12,14 @@ import {Outlet} from '../outlet.model';
 })
 export class OutletVolComponent implements OnInit {
   @Input() outlet!: Outlet;
+  volunteer = false;
   
   constructor(private service: OutletlistService) { }
   ngOnInit(): void {
              
         }
-  fillform(outlet: Outlet): void{
+  fillform(): void{
+    this.volunteer = true;
   }
 
 }

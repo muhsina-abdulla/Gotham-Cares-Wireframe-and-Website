@@ -2,31 +2,31 @@
     <form #editOutlet (submit)="edit()">
         <div class="field-dark" [formGroup]="outletForm">
             <label>Outlet Id</label>
-            <input name="outletId" formControlName="outletId" id="outletId" [value]="outlet.outletId" readonly>
+            <input name="outletId" formControlName="outletId" id="outletId" readonly>
             <br>
             <label>Outlet Name</label>
-            <input name="name" formControlName="name" id="name" [value]="outlet.name" required>
+            <input name="name" formControlName="name" id="name" required>
             <br>
             <label>Street</label>
-            <input  formControlName="street" id="street" [value]="outlet.street" required>
+            <input  formControlName="street" id="street" required>
             <br>
             <label>Landmark</label>
             <input  formControlName="landmark" id="landmark" required>
             <br>
             <label>Available Food Packets</label>
             <input type="number" formControlName="availableFoodPackets"
-                id="availableFoodPackets" [value]="outlet.availableFoodPackets" required>
+                id="availableFoodPackets"  required>
             <br>
             <label>Type of Food</label>
             <input formControlName="foodType" id="foodType" required>
             <br>
             <label>Required Volunteers</label>
-            <input type="number" formControlName="requiredVolunteers"  id="requiredVolunteers" [value]="outlet.requiredVolunteers"
+            <input type="number" formControlName="requiredVolunteers"  id="requiredVolunteers"
                 required>
             <br>
             <span>
                 <label>Date</label>
-                <input type="text" [value]="outlet.date" formControlName="date" id="date">
+                <input type="text" formControlName="date" id="date">
             </span>
     
             <br>

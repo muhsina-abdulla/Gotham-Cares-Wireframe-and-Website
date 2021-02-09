@@ -21,14 +21,14 @@ export class EditformComponent implements OnInit {
   }
   private createForms(): void{
     this.outletForm = this.fb.group({
-      outletId:new FormControl(),
-      name: new FormControl(),
-      street: new FormControl(),
-      landmark: new FormControl(),
-      availableFoodPackets: new FormControl(),
-      foodType: new FormControl(),
-      requiredVolunteers: new FormControl(),
-      date: new FormControl(),
+      outletId:new FormControl(this.outlet.outletId),
+      name: new FormControl(this.outlet.name),
+      street: new FormControl(this.outlet.street),
+      landmark: new FormControl(this.outlet.landmark),
+      availableFoodPackets: new FormControl(this.outlet.availableFoodPackets),
+      foodType: new FormControl(this.outlet.foodType),
+      requiredVolunteers: new FormControl(this.outlet.requiredVolunteers),
+      date: new FormControl(this.outlet.date),
     }); }
    edit(): void{
     console.log('Clicked');
