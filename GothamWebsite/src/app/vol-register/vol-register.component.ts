@@ -32,8 +32,8 @@ export class VolRegisterComponent implements OnInit {
       outletId:new FormControl(this.outlet.outletId)
     }); }
 
-  register(){
-    console.log("clicked");
+  
+  registerVol(){
     console.log('inside registerVol');
     this.service.postVolunteer(this.registrationForm.value).subscribe(resp =>{
       this.response = resp;

@@ -1,5 +1,5 @@
 <div class="container-sm">
-    <form #Register (Submit)="register()" autocomplete="off">
+    <form #registration (ngSubmit)="registerVol()"  autocomplete="off">
         <div class="field-dark" [formGroup]="registrationForm">
             <label class="lab">Outlet Id</label>
             <input formControlName="outletId" readonly><br>
