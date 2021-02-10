@@ -2,20 +2,29 @@ label {
   color: #0e0c0c;
   font-weight: bold;
 
-  width: 250px;
+  width: 100px;
 }
 label:after {
   content: ": ";
 }
 .win {
   margin-top: 100px;
-  margin-left: 400px;
-  margin-right: 350px;
+  margin-left: 30%;
+  margin-right: 40%;
   border: 1px solid;
+  border-radius: 50px;
   margin-bottom: 100px;
   padding: 2em;
 }
 button {
   margin-top: 15px;
-  margin-left: 200px;
+  margin-left: 35%;
+}
+* {
+  background-color: #ade8f4;
+}
+.btn-outline-primary {
+  border-color: #073b4c;
+  background-color: #073b4c;
+  color: #ade8f4;
 }
