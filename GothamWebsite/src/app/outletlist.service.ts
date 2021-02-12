@@ -19,12 +19,9 @@ export class OutletlistService {
       return this.http.get<any>(this.apiurl);
   }
 
-   postOutlet(data: FormGroup): void{
-      console.log(data);
-      this.http.post(this.apiurl, data).subscribe(res => {
-      console.log(res);
-      window.alert(res);
-  }); }
+   postOutlet(data: FormGroup): Observable<any>{
+      return this.http.post(this.apiurl, data);
+   }
 
   deleteOutlet(outlet: Outlet): Observable<any>{
     console.log(outlet.outletId);

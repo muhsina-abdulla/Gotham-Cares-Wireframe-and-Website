@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TopbarComponent } from './topbar/topbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { SecondnavComponent } from './secondnav/secondnav.component';
@@ -27,7 +26,6 @@ import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    TopbarComponent,
     WelcomeComponent,
     FooterComponent,
     SecondnavComponent,
@@ -60,7 +58,7 @@ import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
         component: VolRegisterComponent
       },
       {
-        path:'distribution',
+        path:'distribution Outlets',
         component: DistributionPageComponent
       },
       {
